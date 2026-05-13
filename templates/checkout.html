@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="checkout-box">
+
+        <h1>Checkout</h1>
+
+        <h2>Total Amount: ₹{{ total }}</h2>
+
+        <form method="POST">
+
+            <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            required>
+
+            <input
+            type="text"
+            name="address"
+            placeholder="Enter Address"
+            required>
+
+            <input
+            type="text"
+            name="phone"
+            placeholder="Enter Phone Number"
+            required>
+
+            <h3>Select Payment Method</h3>
+
+            <div class="payment-method">
+
+                <input
+                type="radio"
+                name="payment"
+                value="UPI"
+                required>
+
+                UPI
+
+            </div>
+
+            <div class="payment-method">
+
+                <input
+                type="radio"
+                name="payment"
+                value="Card">
+
+                Card
+
+            </div>
+
+            <div class="payment-method">
+
+                <input
+                type="radio"
+                name="payment"
+                value="Cash On Delivery">
+
+                Cash On Delivery
+
+            </div>
+
+            <button type="submit">
+
+                Place Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

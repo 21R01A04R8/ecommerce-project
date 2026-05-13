@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Product</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Add Product</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Product Name"
+                   required>
+
+            <br><br>
+
+            <input type="number"
+                   name="price"
+                   placeholder="Price"
+                   required>
+
+            <br><br>
+
+            <input type="text"
+                   name="image"
+                   placeholder="Image Name (example: shoes.jpg)"
+                   required>
+
+            <br><br>
+
+            <textarea
+                name="description"
+                placeholder="Description"
+                rows="5"
+                style="width:90%; padding:10px;"
+                required>
+            </textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Add Product
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

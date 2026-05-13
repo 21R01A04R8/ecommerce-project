@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Ecommerce Store</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>My Ecommerce Store</h1>
+
+    <h2 style="text-align:center;">
+        Welcome {{ username }}
+    </h2>
+
+    <div class="nav">
+
+        <a href="/">Home</a>
+        <a href="/cart">Cart</a>
+        <a href="/orders">Orders</a>
+        <a href="/logout">Logout</a>
+
+    </div>
+
+    <!-- Search Box -->
+
+    <div class="search-box">
+
+        <form method="GET">
+
+            <input type="text"
+            name="search"
+            placeholder="Search Products">
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="products">
+
+        {% for product in products %}
+
+        <div class="card">
+
+            <img src="{{ url_for('static',
+            filename='images/' + product.image) }}">
+
+            <h2>{{ product.name }}</h2>
+
+            <p>₹ {{ product.price }}</p>
+
+            <a href="/add_to_cart/{{ product.id }}">
+
+                <button>
+                    Add to Cart
+                </button>
+
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

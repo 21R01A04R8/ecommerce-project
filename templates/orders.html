@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Orders</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <h2>My Ecommerce Store</h2>
+
+        <div>
+
+            <a href="/">Home</a>
+
+            <a href="/cart">Cart</a>
+
+            <a href="/logout">Logout</a>
+
+        </div>
+
+    </div>
+
+    <div class="orders-box">
+
+        <h1>My Orders</h1>
+
+        {% if orders %}
+
+            {% for order in orders %}
+
+            <div class="order-card">
+
+                <h2>
+
+                    {{ order.product_name }}
+
+                </h2>
+
+                <p>
+
+                    Quantity:
+                    {{ order.quantity }}
+
+                </p>
+
+                <p>
+
+                    Payment:
+                    {{ order.payment }}
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <h2>No Orders Yet</h2>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

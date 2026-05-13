@@ -1,0 +1,311 @@
+body{
+
+    font-family: Arial;
+
+    background:#f2f2f2;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    background:black;
+
+    color:white;
+
+    padding:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:15px;
+
+}
+
+/* SEARCH */
+
+.search-box{
+
+    text-align:center;
+
+    margin:20px;
+
+}
+
+.search-box input{
+
+    padding:10px;
+
+    width:250px;
+
+}
+
+.search-box button{
+
+    padding:10px;
+
+}
+
+/* PRODUCTS */
+
+.products{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+/* PRODUCT CARD */
+
+.card{
+
+    background:white;
+
+    width:250px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px gray;
+
+    text-align:center;
+
+}
+
+.card img{
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+.card h2{
+
+    margin-top:10px;
+
+}
+
+.card p{
+
+    color:green;
+
+    font-size:20px;
+
+}
+
+.card button{
+
+    background:blue;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+/* CART */
+
+.cart-box{
+
+    width:80%;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+.cart-item{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px gray;
+
+}
+
+.remove-btn{
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    margin-top:10px;
+
+}
+
+/* CHECKOUT */
+
+.checkout-box{
+
+    width:400px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px gray;
+
+}
+
+.checkout-box h1{
+
+    text-align:center;
+
+}
+
+.checkout-box h2{
+
+    text-align:center;
+
+    color:green;
+
+}
+
+.checkout-box input{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+}
+
+.payment-method{
+
+    margin:10px 0;
+
+    font-size:18px;
+
+}
+
+.checkout-box button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:blue;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+/* SUCCESS PAGE */
+
+.success-box{
+
+    width:400px;
+
+    margin:100px auto;
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px gray;
+
+}
+
+/* ORDERS */
+
+.orders-box{
+
+    width:80%;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+.order-card{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px gray;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .products{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
